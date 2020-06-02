@@ -7,6 +7,7 @@ Release:	16.04
 Codename:	xenial
 ```
 # hostnamectl
+```
    Static hostname: shruti-VirtualBox
          Icon name: computer-vm
            Chassis: vm
@@ -16,8 +17,9 @@ Codename:	xenial
   Operating System: Ubuntu 16.04.6 LTS
             Kernel: Linux 4.15.0-45-generic
       Architecture: x86-64
-
+```
 # cat /etc/*release
+```
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=16.04
 DISTRIB_CODENAME=xenial
@@ -33,13 +35,16 @@ SUPPORT_URL="http://help.ubuntu.com/"
 BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
 VERSION_CODENAME=xenial
 UBUNTU_CODENAME=xenial
-
+```
 # java -version
+```
 openjdk version "1.8.0_252"
 OpenJDK Runtime Environment (build 1.8.0_252-8u252-b09-1~16.04-b09)
 OpenJDK 64-Bit Server VM (build 25.252-b09, mixed mode)
+```
 
 # mysql -u root -p
+```
 Enter password: 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 3
@@ -52,9 +57,11 @@ affiliates. Other names may be trademarks of their respective
 owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
+```
 # mysql> status
+```
 --------------
+
 mysql  Ver 14.14 Distrib 5.7.30, for Linux (x86_64) using  EditLine wrapper
 
 Connection id:		3
@@ -77,8 +84,9 @@ Uptime:			27 min 58 sec
 Threads: 1  Questions: 5  Slow queries: 0  Opens: 107  Flush tables: 1  Open tables: 26  Queries per second avg: 0.002
 
 --------------
-
+```
 # show databases;
+```
 +--------------------+
 | Database           |
 +--------------------+
@@ -88,11 +96,14 @@ Threads: 1  Questions: 5  Slow queries: 0  Opens: 107  Flush tables: 1  Open tab
 | sys                |
 +--------------------+
 4 rows in set (0,48 sec)
-
+```
 # create database Employees;
+```
 Query OK, 1 row affected (0,13 sec)
+```
 
 # mysql> show databases;
+```
 +--------------------+
 | Database           |
 +--------------------+
@@ -103,26 +114,34 @@ Query OK, 1 row affected (0,13 sec)
 | sys                |
 +--------------------+
 5 rows in set (0,00 sec)
+```
 
 # create table info (name varchar(150) NOT NULL, age INT unsigned NOT NULL);
+```
 Query OK, 0 rows affected (1,10 sec)
+```
 
 # mysql> show tables;
+```
 +---------------------+
 | Tables_in_Employees |
 +---------------------+
 | info                |
 +---------------------+
 1 row in set (0,00 sec)
+```
 # describe info;
+```
 +-------+------------------+------+-----+---------+-------+
 | Field | Type             | Null | Key | Default | Extra |
 +-------+------------------+------+-----+---------+-------+
 | name  | varchar(150)     | NO   |     | NULL    |       |
 | age   | int(10) unsigned | NO   |     | NULL    |       |
 +-------+------------------+------+-----+---------+-------+
+```
 
 # redis-server
+```
 6036:C 02 Jun 2020 17:05:25.932 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
 6036:C 02 Jun 2020 17:05:25.932 # Redis version=5.0.8, bits=64, commit=00000000, modified=0, pid=6036, just started
 6036:C 02 Jun 2020 17:05:25.932 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
@@ -151,8 +170,9 @@ Query OK, 0 rows affected (1,10 sec)
 6036:M 02 Jun 2020 17:05:25.948 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
 6036:M 02 Jun 2020 17:05:25.953 * DB loaded from disk: 0.000 seconds
 6036:M 02 Jun 2020 17:05:25.953 * Ready to accept connections
-
+```
 # redis-cli
+```
 127.0.0.1:6379> info
 # Server
 redis_version:5.0.8
@@ -291,4 +311,4 @@ used_cpu_user_children:0.000000
 # Cluster
 cluster_enabled:0
 
-
+```
