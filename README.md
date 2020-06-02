@@ -1,4 +1,4 @@
-#lsb_release -a
+# lsb_release -a
 
 No LSB modules are available.
 Distributor ID:	Ubuntu
@@ -17,7 +17,7 @@ Codename:	xenial
             Kernel: Linux 4.15.0-45-generic
       Architecture: x86-64
 
-cat /etc/*release
+# cat /etc/*release
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=16.04
 DISTRIB_CODENAME=xenial
@@ -34,12 +34,12 @@ BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
 VERSION_CODENAME=xenial
 UBUNTU_CODENAME=xenial
 
-java -version
+# java -version
 openjdk version "1.8.0_252"
 OpenJDK Runtime Environment (build 1.8.0_252-8u252-b09-1~16.04-b09)
 OpenJDK 64-Bit Server VM (build 25.252-b09, mixed mode)
 
-mysql -u root -p
+# mysql -u root -p
 Enter password: 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 3
@@ -53,7 +53,7 @@ owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-mysql> status
+# mysql> status
 --------------
 mysql  Ver 14.14 Distrib 5.7.30, for Linux (x86_64) using  EditLine wrapper
 
@@ -78,7 +78,7 @@ Threads: 1  Questions: 5  Slow queries: 0  Opens: 107  Flush tables: 1  Open tab
 
 --------------
 
-show databases;
+# show databases;
 +--------------------+
 | Database           |
 +--------------------+
@@ -89,10 +89,10 @@ show databases;
 +--------------------+
 4 rows in set (0,48 sec)
 
-create database Employees;
+# create database Employees;
 Query OK, 1 row affected (0,13 sec)
 
-mysql> show databases;
+# mysql> show databases;
 +--------------------+
 | Database           |
 +--------------------+
@@ -104,17 +104,17 @@ mysql> show databases;
 +--------------------+
 5 rows in set (0,00 sec)
 
-create table info (name varchar(150) NOT NULL, age INT unsigned NOT NULL);
+# create table info (name varchar(150) NOT NULL, age INT unsigned NOT NULL);
 Query OK, 0 rows affected (1,10 sec)
 
-mysql> show tables;
+# mysql> show tables;
 +---------------------+
 | Tables_in_Employees |
 +---------------------+
 | info                |
 +---------------------+
 1 row in set (0,00 sec)
-describe info;
+# describe info;
 +-------+------------------+------+-----+---------+-------+
 | Field | Type             | Null | Key | Default | Extra |
 +-------+------------------+------+-----+---------+-------+
@@ -122,7 +122,7 @@ describe info;
 | age   | int(10) unsigned | NO   |     | NULL    |       |
 +-------+------------------+------+-----+---------+-------+
 
-redis-server
+# redis-server
 6036:C 02 Jun 2020 17:05:25.932 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
 6036:C 02 Jun 2020 17:05:25.932 # Redis version=5.0.8, bits=64, commit=00000000, modified=0, pid=6036, just started
 6036:C 02 Jun 2020 17:05:25.932 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
@@ -152,7 +152,7 @@ redis-server
 6036:M 02 Jun 2020 17:05:25.953 * DB loaded from disk: 0.000 seconds
 6036:M 02 Jun 2020 17:05:25.953 * Ready to accept connections
 
-redis-cli
+# redis-cli
 127.0.0.1:6379> info
 # Server
 redis_version:5.0.8
