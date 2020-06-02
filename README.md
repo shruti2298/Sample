@@ -1,11 +1,11 @@
 # lsb_release -a
-
+```
 No LSB modules are available.
 Distributor ID:	Ubuntu
 Description:	Ubuntu 16.04.6 LTS
 Release:	16.04
 Codename:	xenial
-
+```
 # hostnamectl
    Static hostname: shruti-VirtualBox
          Icon name: computer-vm
